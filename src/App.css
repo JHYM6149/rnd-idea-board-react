@@ -1,0 +1,216 @@
+/* 전체 기본 */
+body {
+  font-family: sans-serif;
+  background: #f5f6f8;
+  color: #222;
+  margin: 0;
+  padding: 24px;
+}
+
+/* 헤더 */
+.board-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.board-header h1 {
+  margin: 0 0 8px;
+  font-size: 1.75rem;
+}
+
+.board-header p {
+  margin: 0;
+  color: #666;
+}
+
+/* 입력 폼 */
+.form-section {
+  max-width: 640px;
+  margin: 0 auto 40px;
+}
+
+.idea-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.idea-form label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.idea-form input,
+.idea-form select,
+.idea-form textarea {
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.idea-form input:focus,
+.idea-form select:focus,
+.idea-form textarea:focus {
+  outline: none;
+  border-color: #3b6cff;
+  box-shadow: 0 0 0 3px rgba(59, 108, 255, 0.15);
+}
+
+.idea-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.idea-form button {
+  margin-top: 8px;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: #3b6cff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.idea-form button:hover {
+  background: #2a56d6;
+}
+
+/* 정렬 */
+.sort-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto 20px;
+  padding: 14px 18px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.sort-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.sort-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.sort-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: #f5f6f8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.sort-btn svg {
+  font-size: 1.5rem;
+}
+
+.sort-btn:hover {
+  border-color: #3b6cff;
+  background: #eef1ff;
+  transform: scale(1.05);
+}
+
+.sort-btn.active {
+  background: #eef1ff;
+  border-color: #3b6cff;
+  box-shadow: 0 0 0 3px rgba(59, 108, 255, 0.15);
+}
+
+/* 카드 목록 */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  background: #fff;
+  padding: 20px 20px 48px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.card-category {
+  display: inline-block;
+  background: #eef1ff;
+  color: #3b6cff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #222;
+}
+
+.card-desc {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.card-delete {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  padding: 6px 12px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #c0392b;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.card-delete:hover {
+  color: #fff;
+  background: #c0392b;
+  border-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 16px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
